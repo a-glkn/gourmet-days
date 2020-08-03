@@ -1,0 +1,176 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #8e8e8e
+
+::selection
+	background-color: $accent
+	color: #fff
+
+*
+	outline: none !important
+	margin: 0
+	padding: 0
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.333
+	font-family: $default-font
+	overflow-x: hidden
+	color: $text
+	input, textarea
+		border: #666 1px solid
+		outline: none
+
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+.text-right
+	text-align: right
+
+b, strong
+	font-weight: bold
+
+img
+	max-width: 100%
+	height: auto
+
+.header
+	height: 128px
+	position: relative
+	z-index: 10
+	background: #fff
+	box-shadow: 0px 7px 18px 0px rgba(0, 0, 0, 0.04)
+	.logo
+		width: 139px
+		height: 104px
+		display: block
+		position: absolute
+		top: 8px
+		left: 15px
+		background-repeat: no-repeat
+		background-position: 0 0
+		background-image: url(../img/logo.svg)
+	.btn
+		top: 31px
+		position: absolute
+		right: 15px
+	.phone
+		position: absolute
+		right: 15px
+		top: 82px
+		font-size: 18px
+		a
+			text-decoration: none
+			color: #3d6394
+	&__menu
+		position: absolute
+		left: 0
+		top: 55px
+		width: 100%
+		ul
+			display: flex
+			justify-content: center
+			li
+				list-style: none
+				padding-left: 20px
+				padding-right: 20px
+				a
+					font-size: 16px
+					color: #000000
+					transition: .3s ease
+					text-decoration: none
+					&:hover
+						color: $accent
+
+.section_intro
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: center
+	min-height: 470px
+	.heading
+		margin-bottom: 0.5em
+
+.section_quote
+	padding-top: 0
+	padding-bottom: 0
+	.col-content
+		position: relative
+		padding-bottom: 264px
+	.container	
+		border-bottom: 1px solid #a1bad3
+		background-repeat: no-repeat
+		background-position: bottom right
+		background-image: url(../img/cook.png)
+
+	.quote-author
+		position: absolute
+		bottom: 80px
+		right: 90px
+		text-align: right
+
+.section_order
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: center
+	background-image: url(../img/bg2.jpg)
+	.row-btn
+		margin-top: 35px
+	.col-item
+		margin-top: 30px
+
+
+.footer
+	padding-top: 70px
+	.social-icons
+		justify-content: flex-end
+	.row-bottom
+		margin-top: 60px
+		padding-top: 18px
+		padding-bottom: 25px
+		border-top: 1px solid #eaeaea
+	.logo
+		width: 139px
+		height: 104px
+		background-repeat: no-repeat
+		background-position: 0 0
+		background-image: url(../img/logo.svg)
+	.phone
+		font-size: 28px
+		a
+			color: #383532
+			text-decoration: none
+	.mail
+		font-size: 24px
+		margin-top: 1em
+		a
+			text-decoration: none
+			color: #3d6394
+	.col-contacts
+		text-align: right
+.section_contacts
+	p
+		font-size: 16px
+		color: #656565
+	.phone
+		font-size: 28px
+		a
+			color: #383532
+	.mail
+		font-size: 24px
+		margin-top: 1em
+		a
+			color: #3d6394
+@import "media" // Always at the end

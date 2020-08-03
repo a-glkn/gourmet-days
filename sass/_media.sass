@@ -1,0 +1,162 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
++media-breakpoint-down(xl)
+    
+    
+// ≥1200px
++media-breakpoint-down(lg)
+    .header__menu 
+        ul 
+            li
+                padding-left: 12px
+                padding-right: 12px
+                a
+                    font-size: 14px
+
+    .radios 
+        label
+            // font-size: 16px
+
+    .quote-author
+        font-size: 20px
+        &__name
+            font-size: 24px
+
+    .section_quote 
+        .quote-author
+            bottom: 150px
+// ≥992px
++media-breakpoint-down(md)
+    .menu-toggler
+        display: block
+    body
+        padding-top: 60px
+    .header
+        width: 100%
+        height: 60px
+        position: fixed
+        top: 0
+        left: 0
+        .logo
+            width: 67px
+            height: 50px
+            top: 5px
+        &__menu, .btn, .phone
+            display: none
+    .heading
+        &_lg
+            font-size: 30px
+        &_md
+            font-size: 24px
+        &_line
+            &:after
+                width: 130px
+                right: -150px
+    .section
+        font-size: 16px 
+        p
+            font-size: 16px
+
+    .card
+        height: auto
+        &__img
+            img
+                width: 100%
+                height: auto
+    .step-block
+        height: auto
+    .step-block__title
+        font-size: 24px
+    .step-block__subtitle
+        font-size: 20px
+
+    .faq__item-question
+        font-size: 20px
+
+    .faq__item
+        padding-top: 12px
+        padding-bottom: 12px
+
+    .faq__item-answer
+        font-size: 18px
+    .section_contacts
+        padding-top: 0
+    .section_quote 
+        .quote-author
+            left: 15px
+            right: auto
+            text-align: left
+    .section_quote 
+        .col-content
+            padding-bottom: 470px
+
+    .section_contacts, .footer 
+        .phone
+            font-size: 24px
+        .mail
+            font-size: 20px
+
+        .form
+            margin-top: 30px
+
+    .iconned-text__content
+        font-size: 16px
+        &-num
+            font-size: 24px
+
+    .quote
+        padding-top: 20px
+        padding-bottom: 10px
+        padding-right: 20px
+
+// ≥768px
++media-breakpoint-down(sm)
+    .section_quote 
+        .container
+            background: none
+        .col-content
+            padding-bottom: 0
+
+        .quote-author
+            margin-top: 30px
+            margin-bottom: 30px
+            position: static
+            text-align: right
+
+
+    .footer 
+        .logo
+            margin-left: auto
+            margin-right: auto
+
+        .col-contacts
+            margin-top: 30px
+            text-align: center
+
+        .copyright
+            width: 100%
+            text-align: center
+        .social-icons
+            margin-bottom: 15px
+            justify-content: center
+            li
+                margin-left: 3px
+                margin-right: 3px
+// ≥576px
++media-breakpoint-down(xs)
+    
+/*==========  Mobile First  ==========*/
+
+// ≤576px
++media-breakpoint-up(sm)
+
+// ≤768px
++media-breakpoint-up(md)
+
+// ≤992px
++media-breakpoint-up(lg)
+
+// ≤1200px
++media-breakpoint-up(xl)

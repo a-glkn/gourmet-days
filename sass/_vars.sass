@@ -1,0 +1,605 @@
+$default-font: "CoreSans", sans-serif
+$accent: #f34a4e
+$text: #383533
+
+// Customization Bootstrap vars from "app/libs/bootstrap/scss/_variables.scss"
+$grid-gutter-width: 30px
+$grid-columns: 12
+$grid-breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px)
+$container-max-widths: (sm: 540px, md: 720px, lg: 960px, xl: 1140px)
+
+$gutter: $grid-gutter-width
+
+.bg-grey
+    background-color: #f9f9f9
+
+.bg-white
+    background-color: #fff
+
+.bg-cover
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
+
+.text-blue
+    color: #39a3df
+
+.text-accent
+    color: $accent !important
+
+
+.iconned-text
+    display: flex
+    margin-top: 20px
+    margin-bottom: 20px
+    &__icon
+        width: 72px
+        height: 72px
+        svg
+            fill: #3E6394
+            width: 72px
+            height: 72px
+    
+    &__content
+        margin: auto 0
+        font-size: 18px
+        color: #000000
+        line-height: 1.33333
+        padding-left: 28px
+        &-num
+            font-size: 26px
+            color: #a1bad3
+     
+
+
+.heading
+    &_lg
+        font-size: 40px
+        font-weight: bold
+    &_md
+        font-size: 30px
+        font-weight: bold
+    &_line
+        position: relative
+        display: inline-block
+        &:after
+            content: ''
+            position: absolute
+            display: block
+            width: 170px
+            height: 1px
+            background-color: #a1bad3
+            right: -190px
+            top: 1em
+.btn
+    width: 170px
+    height: 40px
+    border-radius: 20px
+    background-color: #fff
+    border: 1px solid #f56e71
+    font-size: 14px
+    color: #383532
+    cursor: pointer
+    transition: .3s ease
+    &:hover
+        background-color: $accent
+        border-color: $accent
+        color: #fff
+
+    &_primary
+        color: #fff
+        background-color: $accent
+        border-color: $accent
+        &:hover
+            box-shadow: 0px 7px 20px 0px rgba(0, 0, 0, 0.11)
+.section
+    padding-top: 60px
+    padding-bottom: 60px
+    color: #383532
+    font-size: 18px
+    overflow: hidden
+    p
+        color: #383532
+        font-size: 18px
+    .heading-main
+        margin-bottom: 1.5em
+
+.card
+    background-color: #fff
+    padding-left: 20px
+    padding-right: 20px
+    border-radius: 4px
+    padding-bottom: 115px
+    position: relative
+    transition: .3s ease
+    margin-top: 30px
+    height: 100%
+    &__img
+        margin-left: -20px
+        margin-right: -20px
+        position: relative
+        &:after
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            content: ''
+            display: block
+            background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%)
+
+    &__title
+        font-size: 24px
+        color: #3d6394
+        text-align: center
+        font-weight: 700
+        margin-bottom: 0.5em
+        margin-top: -2em
+        position: relative
+        z-index: 11
+    &__text
+        font-size: 19px
+        color: #000000
+        line-height: 1.25
+        min-height: 3.75em 
+        text-align: center
+
+
+    &__bottom
+        border-top: 1px solid #f3f3f3
+        text-align: center
+        position: absolute
+        width: calc(100% - 40px)
+        height: 100px
+        padding-top: 30px
+        bottom: 0
+        left: 20px
+        .btn
+            display: inline-block
+
+    &:hover
+        box-shadow: 0px 7px 49px 0px rgba(0, 0, 0, 0.11)
+
+
+.faq
+    &__item
+        margin-bottom: 1px
+        color: #383532
+        background-color: #fff
+        border-radius: 4px
+        cursor: pointer
+        transition: .3s ease
+        position: relative
+        padding-top: 10px
+        padding-bottom: 10px
+        &-question
+            padding-right: 70px
+            padding-left: 20px
+            font-size: 22px
+            padding-top: 0
+            padding-bottom: 0
+            position: relative
+            &:after
+                content: ''
+                display: block
+                width: 29px
+                height: 1px
+                background-color: #a1bad3
+                top: 15px
+                right: 20px
+                position: absolute
+            &:before
+                content: ''
+                display: block
+                width: 29px
+                height: 1px
+                background-color: #a1bad3
+                top: 15px
+                right: 20px
+                transform: rotate(90deg)
+                position: absolute
+        &-answer
+            padding-top: 10px
+            font-size: 20px
+            padding-right: 70px
+            padding-left: 20px
+            display: none
+        &.active
+            z-index: 2
+            box-shadow: 0px 7px 49px 0px rgba(0, 0, 0, 0.11)
+            .faq
+                &__item
+                    &-question
+                        color: #3d6394
+                        &:before
+                            display: none
+                    &-answer
+                        display: block
+
+
+.quote
+    background-color: #f1f8ff
+    border-radius: 0 32px 0 32px
+    position: relative
+    font-size: 18px
+    color: #383532
+    text-align: center
+    padding-left: 25px
+    padding-right: 60px
+    padding-top: 40px
+    padding-bottom: 20px
+    &:after
+        content: ''
+        display: block
+        width: 39px
+        height: 39px
+        position: absolute
+        bottom: 0
+        right: -39px
+        background-repeat: no-repeat
+        background-image: url(../img/q.png)
+        background-position: 0 0
+
+
+.quote-author
+    font-size: 26px
+    &__name
+        font-size: 32px
+        color: #3d6394
+
+
+
+.step-block
+    background-color: #fefefe
+    padding-left: 17px
+    padding-right: 17px
+    border-radius: 4px
+    padding-top: 45px
+    display: flex
+    flex-direction: column
+    height: 100%
+    padding-bottom: 25px
+    &__title
+        text-align: center
+        font-size: 26px
+        color: #3d6394
+        font-weight: bold
+        margin-bottom: 0.5em
+    &__subtitle
+        font-size: 22px
+        color: #383532
+        text-align: center
+        margin-bottom: 1em
+
+.mobile-menu
+    position: fixed
+    top: 60px
+    left: 0
+    width: 100%
+    height: 100%
+    z-index: 1000
+    background-color: #fff
+    display: none
+    user-select: none
+    text-align: center
+    .btn
+        margin-top: 30px
+    .mobile-menu__inner
+        overflow-y: auto
+        overflow-x: hidden
+    .mobile-menu__menu
+        margin-top: 14px
+        border-top: 1px solid #eaeaea
+        border-bottom: 1px solid #eaeaea
+        ul
+            li
+                list-style: none
+                margin: 1em 0
+                
+                ul
+                    background-color: #f9f9f9
+                    padding-top: 0.5em
+                    padding-bottom: 0.5em
+                    margin-top: 0.5em
+                    display: none
+                    li
+                        a
+                            display: block
+                a
+                    position: relative
+                    font-size: 16px
+                    color: $text
+                    text-decoration: none
+                    padding-left: 10px
+                    padding-right: 10px
+                    transition: .3s ease
+                    &:hover
+                        color: $accent
+         
+
+    .mobile-menu__phones
+        display: flex
+        justify-content: space-around
+        height: 30px
+        line-height: 30px
+        position: relative
+        margin-top: 9px
+        margin-bottom: 30px
+        a
+            text-decoration: none
+            font-size: 18px
+            color: #000
+
+.menu-openned
+    overflow: hidden
+    .mobile-menu
+        display: block
+    .menu-toggler
+        span
+            transform: rotate(45deg)
+            &:after
+                display: none
+            &:before
+                top: 0px
+                transform: rotate(90deg)
+
+
+.menu-toggler
+    display: none
+    width: 32px
+    height: 32px
+    cursor: pointer
+    position: absolute
+    top: 14px
+    right: 15px
+    span
+        width: 32px
+        height: 1px
+        background-color: $accent
+        position: absolute
+        top: 15.5px
+        &:after, &:before
+            content: ''
+            width: 32px
+            height: 1px
+            display: block
+            position: absolute
+            display: block
+            background-color: $accent
+        &:before
+            top: -8px
+        &:after
+            top: 8px
+
+
+.radios
+    p
+        padding: 0
+        margin: 0
+    label
+        margin-bottom: 20px
+        width: 100%
+        padding-top: 9px
+        padding-bottom: 9px
+        background-color: #f9f9f9
+        font-size: 18px
+        color: #8e8e8e
+        border-radius: 20px
+        position: relative
+        padding-right: 45px
+        padding-left: 20px
+    [type="radio"]:checked,
+    [type="radio"]:not(:checked) 
+        position: absolute
+        left: -9999px
+
+    [type="radio"]:checked + label
+        color: #3d6394
+    [type="radio"]:checked + label,
+    [type="radio"]:not(:checked) + label
+        position: relative
+        cursor: pointer
+        display: inline-block
+
+    [type="radio"]:checked + label:after,
+    [type="radio"]:not(:checked) + label:after 
+        content: ''
+        width: 37px
+        height: 37px
+        background-repeat: no-repeat
+        background-position: 0 0
+        background-image: url(../img/check.png)
+        position: absolute
+        top: 50%
+        margin-top: -18.5px
+        right: 2px
+
+    [type="radio"]:not(:checked) + label:after 
+        opacity: 0
+        transform: scale(0)
+
+    [type="radio"]:checked + label:after 
+        opacity: 1
+        transform: scale(1)
+    &_v-2
+        label
+            width: 100%
+            padding-top: 0
+            padding-bottom: 0
+            font-size: 24px
+            color: #383532
+            border-radius: 20px
+            position: relative
+            padding-right: 45px
+            padding-left: 20px
+            background: transparent
+            margin-bottom: 40px
+            span
+                display: block
+                color: #3d6394
+        [type="radio"]:checked,
+        [type="radio"]:not(:checked) 
+            position: absolute
+            left: -9999px
+
+        [type="radio"]:checked + label
+            color: #383532
+        [type="radio"]:checked + label,
+        [type="radio"]:not(:checked) + label
+            position: relative
+            cursor: pointer
+            display: inline-block
+        [type="radio"]:checked + label:after,
+        [type="radio"]:not(:checked) + label:after 
+            content: ''
+            width: 37px
+            height: 37px
+            background-repeat: no-repeat
+            background-position: 0 0
+            background-image: url(../img/check.png)
+            position: absolute
+            top: 2px
+            right: 2px
+            margin-top: 0
+
+        [type="radio"]:not(:checked) + label:after 
+            opacity: 0
+            transform: scale(0)
+
+        [type="radio"]:checked + label:after 
+            opacity: 1
+            transform: scale(1)
+
+
+.form
+    .checkbox
+        text-align: left
+        font-size: 14px
+        color: $text
+        position: relative
+        display: flex
+        padding-left: 25px
+        margin-bottom: 20px
+        label
+            user-select: none
+            color: #b0b0b0
+            margin-bottom: 0
+            &:before
+                content: ""
+                display: inline-block
+                width: 13px
+                height: 13px
+                position: absolute
+                left: 0
+                top: 50%
+                margin-top: -6.5px
+                cursor: pointer
+                border: 1px solid #eeeeee
+                background-color: #fff
+                border-radius: 2px
+            a
+                color: #3d6394
+                text-decoration: none
+                &:hover
+                    color: #3d6394
+                    text-decoration: none
+        input[type=checkbox]
+            display: none
+            &:checked + label:before
+                background: url(../img/check-2.png) center no-repeat
+    &__input
+        margin-bottom: 20px
+        font-size: 18px
+        color: #3d6394
+        width: 100%
+        padding-left: 20px
+        padding-right: 20px
+        height: 41px
+        background-color: #f9f9f9
+        border: 0
+        border-radius: 20px
+
+    &__text
+        margin-bottom: 20px
+        padding-top: 10px
+        padding-bottom: 10px
+        resize: none
+        font-size: 18px
+        color: #3d6394
+        width: 100%
+        padding-left: 20px
+        padding-right: 20px
+        height: 100px
+        background-color: #f9f9f9
+        border: 0
+        border-radius: 20px
+
+.section_map
+    padding-top: 0
+    padding-bottom: 0
+    height: 505px
+    width: 100%
+
+
+
+[class$="-balloon__content"]
+    // border-radius: 4px !important
+
+[class$="-balloon_layout_normal"]
+    // padding: 0 !important
+    // border-radius: 4px !important
+    // background-color: #ffffff !important
+
+[class$="-balloon__tail"]
+    // background: #fff !important
+
+[class$="-balloon__layout"]
+    // border-radius: 4px !important
+
+
+.balloon
+    padding-top: 10px
+    padding-bottom: 10px
+    background-color: #ffffff
+    color: #383532
+    font-size: 16px
+    text-align: center
+    width: 200px
+    padding-left: 18px
+    font-family: $default-font
+    &__heading
+        font-size: 18px
+        margin-bottom: 0.5em
+        
+
+.social-icons
+	display: flex
+	.social-icons__item
+		width: 33px
+		height: 33px
+		border-radius: 50%
+		display: flex
+		background-color: #eaeaea
+		margin-left: 6px
+		.icon
+			height: 16px
+			margin: auto
+		&.social-icons__item_vk
+			.icon
+				width: 20px
+				fill: #3d6394
+		&.social-icons__item_fb
+			.icon
+				width: 14px
+				fill: #3d6394
+		&.social-icons__item_insta
+			.icon
+				width: 16px
+				fill: #3d6394
+                
+
+.social-icons
+	.social-icons__item
+        transition: .3s ease
+        &:hover
+            opacity: .7
